@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Strength Analyzer | Task 1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Password Strength Analyzer</h2>
+      <p class="subtitle">Evaluate and generate secure passwords.</p>
+
+      <div class="input-group">
+        <input
+          type="password"
+          id="password-input"
+          placeholder="Type your password here..."
+        />
+        <button
+          id="toggle-visibility"
+          type="button"
+          aria-label="Toggle password visibility"
+        >
+          Show
+        </button>
+      </div>
+
+      <div class="strength-meter-container">
+        <div id="strength-bar" class="strength-bar"></div>
+      </div>
+      <p id="strength-text" class="strength-text">Awaiting input...</p>
+
+      <ul class="requirements-list">
+        <li id="req-length" class="invalid">At least 8 characters</li>
+        <li id="req-lower" class="invalid">Contains lowercase letter</li>
+        <li id="req-upper" class="invalid">Contains uppercase letter</li>
+        <li id="req-number" class="invalid">Contains a number</li>
+        <li id="req-special" class="invalid">Contains a special character</li>
+      </ul>
+
+      <div class="suggestion-box">
+        <h3>Need a stronger option?</h3>
+        <div class="generator-group">
+          <input
+            type="text"
+            id="suggested-password"
+            readonly
+            placeholder="Generated password will appear here"
+          />
+          <button id="generate-btn">Generate</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
